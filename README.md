@@ -1,6 +1,6 @@
 # chained_comparisons
 
-Adds relatively simple chained comparison (`X&lt;=Y&lt;=Z`) support for C++ 11
+Adds relatively simple chained comparison (`X<=Y<=Z`) support for C++ 11
 
 In C++, `A < B < C` is parsed as `(A < B) < C`, where you may be expecting `(A < B) && (B < C)`. This library fixes that.
 
