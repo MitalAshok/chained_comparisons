@@ -1,5 +1,4 @@
 #include "chained_comparisons.h"
-#include "chained_comparisons.h"
 
 #include <iostream>
 #include <cstdlib>

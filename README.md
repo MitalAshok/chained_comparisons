@@ -22,7 +22,7 @@ bool rounds_down(double x) {
 }
 ```
 
-You can use a different name by creating a `::chained_comparisons::C` object (recommended declaration: `static constexpr const chained_comparisons::C my_chain_alias;`)
+You can use a different name by creating a `::chained_comparisons::C` object (recommended declaration: `static constexpr chained_comparisons::C my_chain_alias;`)
 
 ## Usage
 
@@ -49,3 +49,15 @@ The `-Wparentheses` warning flag in GCC will warn when chained comparisons are u
 #pragma GCC diagnostic pop
 #endif
 ```
+
+Or surround your code in the helper macros that do this for you:
+
+```cpp
+CHAINED_COMPARISONS_START
+
+// Code that uses chained comparisons
+
+CHAINED_COMPARISONS_END
+```
+
+Note that there is no semicolon after the macros, and they can be used in any position (including within an expression)
